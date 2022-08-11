@@ -1,0 +1,2 @@
+class Reipe < ApplicationRecord
+end
