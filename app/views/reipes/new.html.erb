@@ -7,17 +7,30 @@
     </div>
   </div>
 </section>
-<%= form_for @recipe do |f| %>
 
-<%= f.label :title %>
-<%= f.text_area :title %>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-6">
+        <%= form_for @recipe do |f| %>
+          <div class="field">
+            <%= f.label :title, "レシピ名", class: "label" %>
+            <%= f.text_field :title, class: "input" %>
+          </div>
 
-<%= f.label :body %>
-<%= f.text_area :body %>
+          <div class="field">
+            <%= f.label :body, "作り方", class: "label" %>
+            <%= f.text_area :body, class: "textarea" %>
+          </div>
 
-<%= f.label :image %>
-<%= f.attachment_field:image %>
+          <div class="field">
+            <%= f.label :image, "写真", class: "label" %>
+            <%= f.attachment_field :image, class: "input" %>
+          </div>
 
-<%= f.submit %>
-
-<% end %>
+          <%= f.submit '投稿', class: "button is-success" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
