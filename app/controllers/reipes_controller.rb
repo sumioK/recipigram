@@ -11,7 +11,7 @@ class ReipesController < ApplicationController
   end
   def create
     @reipe = Reipe.new(reipe_params)
-    @reipe.user/id = current_user.id
+    @reipe.user_id = current_user.id
     @reipe.save
     redirect_to reipe_path(@reipe)
   end
@@ -22,6 +22,6 @@ class ReipesController < ApplicationController
 
   private
   def reipe_params
-    params.require(reipe).permit(:title, :body, :image)
+    params.require(:reipe).permit(:title, :body, :image)
   end
 end
