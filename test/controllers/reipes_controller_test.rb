@@ -1,23 +1,23 @@
 require 'test_helper'
 
-class RecipesControllerTest < ActionDispatch::IntegrationTest
+class ReipesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get recipes_index_url
+    get reipes_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get recipes_show_url
+    get reipes_show_url
     assert_response :success
   end
 
   test "should get new" do
-    get recipes_new_url
+    get reipes_new_url
     assert_response :success
   end
 
   test "should get edit" do
-    get recipes_edit_url
+    get reipes_edit_url
     assert_response :success
   end
 
