@@ -1,2 +1,5 @@
-<h1>Reipes#show</h1>
-<p>Find me in app/views/reipes/show.html.erb</p>
+<%= attachment_image_tag @reipe, :image %>
+
+<%= @reipe.title %>
+
+<%= simple_format @reipe.body %>

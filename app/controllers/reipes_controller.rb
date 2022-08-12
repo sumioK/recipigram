@@ -3,6 +3,7 @@ class ReipesController < ApplicationController
   end
 
   def show
+    @reipe = Reipe.find(params[:id])
   end
 
   def new
