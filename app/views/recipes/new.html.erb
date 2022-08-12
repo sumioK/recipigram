@@ -1,5 +1,23 @@
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        新規レシピ作成
+      </h1>
+    </div>
+  </div>
+</section>
 <%= form_for @recipe do |f| %>
 
-f.label
+<%= f.label :title %>
+<%= f.text_area :title %>
+
+<%= f.label :body %>
+<%= f.text_area :body %>
+
+<%= f.label :image %>
+<%= f.attachment_field:image %>
+
+<%= f.submit %>
 
 <%= end %=
