@@ -1,5 +1,6 @@
 class ReipesController < ApplicationController
   def index
+    @reipes =Reipe.all
   end
 
   def show
