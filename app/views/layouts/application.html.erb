@@ -33,6 +33,12 @@
 
     <% if user_signed_in? %>
       <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-item">
+          <%= link_to "レシピ一覧", reipes_path, class:"navbar-item button is-warning is-light" %>
+        </div>
+        <div class="navbar-item">
+          <%= link_to "新規投稿", new_reipe_path, class:"navbar-item button is-warning is-light" %>
+        </div>
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
