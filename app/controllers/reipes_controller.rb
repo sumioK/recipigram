@@ -18,8 +18,13 @@ class ReipesController < ApplicationController
   end
 
   def edit
+    @reipe = Reipe.find(params[:id])
   end
-
+  def update
+    @reipe = Reipe.find(params[:id])
+    @reipe.update(reipe_params)
+    redirect_to reipe_path(@reipe)
+  end
 
   private
   def reipe_params
