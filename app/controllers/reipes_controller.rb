@@ -17,6 +17,7 @@ class ReipesController < ApplicationController
   end
 
   def edit
+    @reipe = Reipe.find(params[:id])
   end
 
 
