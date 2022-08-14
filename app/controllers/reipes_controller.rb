@@ -15,12 +15,18 @@ class ReipesController < ApplicationController
   def create
     @reipe = Reipe.new(reipe_params)
     @reipe.user_id = current_user.id
-    @reipe.save
-    redirect_to reipe_path(@reipe)
+    if @reipe.save
+      redirect_to reipe_path(@reipe)
+    else
+      render :new
+    end
   end
 
   def edit
     @reipe = Reipe.find(params[:id])
+    if @reipe.user != current_user
+      redirect_to reipes_path,alert: '不正なアクセスです。'
+    end
   end
   def update
     @reipe = Reipe.find(params[:id])
