@@ -25,7 +25,7 @@
                                 <td class="is-size-4">
                                     <strong><%= @user.username %></strong>
                                 </td>
-                                <% if @user.id == current_user.id %>
+                                <% if @user == current_user %>
                                     <td class="is-size-4">
                                         <%= @user.email %>
                                     </td>
@@ -70,7 +70,7 @@
                     </span>
                     このレシピを見る
                   <% end %>
-                  <% if @user.id == current_user.id %>
+                  <% if @user == current_user %>
                     <%= link_to edit_reipe_path(reipe), class: "panel-block" do %>
                       <span class="panel-icon">
                         <i class="fas fa-edit"></i>
