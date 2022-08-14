@@ -26,6 +26,11 @@ class ReipesController < ApplicationController
     @reipe.update(reipe_params)
     redirect_to reipe_path(@reipe)
   end
+  def delete
+    @reipe = Reipe.find(params[:id])
+    @reipe.destroy
+    redirect_to reipes_path
+  end
 
   private
   def reipe_params

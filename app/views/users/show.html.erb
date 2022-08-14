@@ -47,3 +47,11 @@
         </div>
     </div>
 </section>
+
+
+<% @user.reipes.each do |reipe| %>
+    <%= attachment_image_tag reipe, :image %>
+    <%= link_to "詳細",reipe_path(reipe) %>
+    <%= link_to "編集",edit_reipe_path(reipe) %>
+    <%= link_to "削除",reipe_path(reipe), method: :delete, data: {confirm:"削除しますか?"} %>
+<% end %>
